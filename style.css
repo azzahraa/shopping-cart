@@ -1,0 +1,226 @@
+/*	Reset & General
+---------------------------------------------------------------------- */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+* { margin: 0px; padding: 0px; }
+body {
+	font-family: "Open Sans", sans-serif; 
+	overflow: scroll;	
+}
+
+#header{
+	height:92px; 
+	background:#fff url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/header-icons.png") 1448px -2px no-repeat;
+	border-bottom:1px solid #eee;
+}
+#header ul{padding:33px 0 0 45px;}
+#header li{
+	list-style:none;
+	float:left;
+	margin-right:30px;	
+}
+#header li a{
+	font-weight:700;
+	color:#333;
+	font-size:14px;	
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+#headerli a:hover{
+	color:#000;
+	cursor:pointer;
+}
+
+
+
+/*cart*/
+.container{
+    list-style: none;
+    justify-content: space-evenly;
+    justify-content: center;
+}
+.shopping-cart {
+	width: 750px;
+	height: auto;
+	margin: 80px 0 auto;
+	background: #FFFFFF;
+	box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+	border-radius: 6px;
+   
+	display: flex;
+	flex-direction: column;
+  }
+ .shop{
+	 display: flex;
+ }
+  .price-total{
+	  position: sticky;
+	  font-stretch: normal;
+	  font-size: 20px;
+	  color: rgb(67, 85, 32);
+
+  } 
+  .item:nth-child(3) {
+	border-top:  1px solid #E1E8EE;
+	border-bottom:  1px solid #E1E8EE;
+  }
+  /* Buttons */
+  .buttons {
+	position: relative;
+	padding-top: 30px;
+	margin-right: 60px;
+	float: right;
+  }
+ .delete-btn,
+  .like-btn {
+	display: inline-block;
+	Cursor: pointer;
+  }
+  
+
+  .delete-btn {
+	    
+		color:black;
+		transition: all 0.5s;
+		background: url("delete-icn.svg") no-repeat center;
+		position: relative; 
+		display: inline-block;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+	}
+	.delete-btn span {
+		z-index: 2; 
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;   
+	}
+	.delete-btn::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		transition: all 0.5s;
+		border: 1px solid rgba(175, 166, 166, 0.2);
+		background-color: rgba(10, 10, 15, 0.1);
+	}
+	.delete-btn::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		transition: all 0.5s;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		background-color: rgba(224, 45, 45, 0.1);
+	}
+	.delete-btn:hover::before {
+	  transform: rotate(-45deg);
+	  background-color: rgba(206, 22, 22, 0);
+	}
+	.delete-btn:hover::after {
+	  transform: rotate(45deg);
+	  background-color: rgba(228, 181, 181, 0);
+	}
+   
+  .like-btn {
+	position: absolute;
+	top: 9px;
+	left: 15px;
+	background: url('twitter-heart.png');
+	width: 60px;
+	height: 60px;
+	background-size: 2900%;
+	background-repeat: no-repeat;
+  }
+  button[class*=btn] {
+	width: 30px;
+	height: 30px;
+	background-color: #E1E8EE;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+  }
+  .minus-btn img {
+	margin-bottom: 3px;
+	
+  }
+  .plus-btn img {
+	margin-top: 2px;
+	float: center;
+  }
+   
+  button:focus {
+	outline:0;
+  }
+   /* end of Buttons */
+   .is-active {
+	animation-name: animate;
+	animation-duration: .8s;
+	animation-iteration-count: 1;
+	animation-timing-function: steps(28);
+	animation-fill-mode: forwards;
+  }
+   
+  @keyframes animate {
+	0%   { background-position: left;  }
+	50%  { background-position: right; }
+	100% { background-position: right; }
+  }
+  .image {
+	margin-right: 50px;
+  }
+   
+  .description {
+	padding-top: 10px;
+	margin-right: 60px;
+	width: 150px;
+  }
+   
+  .description span {
+	display: block;
+	font-size: 14px;
+	color: #000000;
+	font-weight: 400;
+  }
+   
+  .description span:first-child {
+	margin-bottom: 5px;
+  }
+  .description span:last-child {
+	font-weight: 300;
+	margin-top: 8px;
+	color: #05111b;
+  }
+  .quantity {
+	padding-top: 20px;
+	margin-right: 60px;
+  }
+
+ 
+  .total-price {
+	width: 83px;
+	padding-top: 27px;
+	text-align: center;
+	font-size: 16px;
+	color: #43484D;
+	font-weight: 300;
+  }
+
+/* ---------------- */
+
+.price{
+	font-size: 34px;
+    font-weight: 600;
+    color: #053529;
+    margin-top: 21px;
+}
+
